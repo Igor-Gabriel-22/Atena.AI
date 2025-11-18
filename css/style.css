@@ -1,0 +1,77 @@
+body{
+    background: linear-gradient(45deg, black, #15ff00, black);
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.mensagem{
+    width: 45%;
+    height: 4.5%;
+    background: rgba(255, 255, 255, 0.753);
+    border: 0;
+    border-radius: 23px;
+    font-size: 20px;
+    padding-left: 1%;
+    box-shadow: 2px 4px 6px #000000b9;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.enviar{
+    height: 5%;
+    width: 2.5%;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 2px 4px 6px #000000b9;
+    bottom: 2%;
+    border: 0;
+    left: 73.2%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease;
+}
+
+.enviar:hover{
+    transform: translateY(-8px);
+}
+
+.bi-arrow-up-short{
+    font-size: 45px;
+    color: black;
+}
+
+.bi-list{
+    font-size: 50px;
+    color: black;
+}
+
+.btn-aside{
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0%;
+    transition: left 1s ease;
+}
+.btn-aside.active{
+    left: 15%;
+}
+
+.historico{
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: -15%;
+    top: 0%;
+    transition: left 1s ease;
+}
+.historico.active{
+    left: 0%;
+}
