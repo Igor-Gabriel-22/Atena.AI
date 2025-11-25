@@ -7,20 +7,27 @@ const btn_aside = document.getElementById("btn-aside");
 
 
 
-function criarMensagem(texto, corFundo) {
+function criarMensagem(texto, corFundo, lado = "left") {
     const div = document.createElement("div");
     div.style.display = "inline-block";
-    div.style.alignSelf = "flex-start";
     div.style.maxWidth = "70%";
     div.style.borderRadius = "10px";
     div.style.background = corFundo;
     div.style.marginTop = "20px";
-    div.style.marginLeft = "10px";
     div.style.fontSize = "19px";
     div.style.fontFamily = "Arial, Helvetica, sans-serif";
     div.style.padding = "10px 15px";
     div.style.boxShadow = "0px 2px 6px black";
     div.style.wordBreak = "break-word";
+
+    if (lado === "right") {
+        div.style.alignSelf = "flex-end";
+        div.style.marginRight = "10px";
+    } else {
+        div.style.alignSelf = "flex-start";
+        div.style.marginLeft = "10px";
+    }
+
     div.textContent = texto;
     return div;
 }
@@ -36,12 +43,12 @@ async function digitado() {
         return;
     }
 
-    const msgUser = criarMensagem(valor, "lightgray");
+    const msgUser = criarMensagem(valor, "#ececec", "left");
     body.appendChild(msgUser);
 
     input.value = "";
 
-    const carregando = criarMensagem("⌛ Aguardando resposta...", "#d0d0ff");
+    const carregando = criarMensagem("⌛ Aguardando resposta...", "#e2e2fcff", "right");
     carregando.id = "carregando";
     body.appendChild(carregando);
 
