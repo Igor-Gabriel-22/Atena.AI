@@ -41,14 +41,11 @@ def chat():
 
     resposta = requests.post(URL, json=payload, headers=headers).json()
 
-    # Debug: ver no Render o que veio
     print("RESPOSTA DA API:", resposta)
 
-    # Caso tenha erro
     if "error" in resposta:
         return jsonify({"resposta": "⚠️ Erro da IA: " + resposta["error"]["message"]})
 
-    # Caso falte 'choices'
     if "choices" not in resposta:
         return jsonify({"resposta": "⚠️ A IA não respondeu corretamente."})
 
