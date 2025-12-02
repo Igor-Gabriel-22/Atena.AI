@@ -62,3 +62,96 @@ async function digitado() {
 
     carregando.textContent = json.resposta;
 }
+
+
+const chat1 = document.getElementById("chat1");
+const c1 = document.querySelectorAll(".c1");
+
+chat1.addEventListener("click", () =>
+     {
+    c1.forEach(item => {
+        item.style.display =
+            item.style.display === "none" || item.style.display === ""
+            ? "flex"
+            : "none";
+    });
+});
+
+
+const chat2 = document.getElementById("chat2");
+const c2 = document.querySelectorAll(".c2");
+
+chat2.addEventListener("click", () => {
+    c2.forEach(item => {
+        item.style.display =
+            item.style.display === "none" || item.style.display === ""
+            ? "flex"
+            : "none";
+    });
+});
+
+
+const chat3 = document.getElementById("chat3");
+const c3 = document.querySelectorAll(".c3");
+
+chat3.addEventListener("click", () => {
+    c3.forEach(item => {
+        item.style.display =
+            item.style.display === "none" || item.style.display === ""
+            ? "flex"
+            : "none";
+    });
+});
+
+
+const chat4 = document.getElementById("chat4");
+const c4 = document.querySelectorAll(".c4");
+
+chat4.addEventListener("click", () => {
+    c4.forEach(item => {
+        item.style.display =
+            item.style.display === "none" || item.style.display === ""
+            ? "flex"
+            : "none";
+    });
+});
+
+
+const chat5 = document.getElementById("chat5");
+const c5 = document.querySelectorAll(".c5");
+
+chat5.addEventListener("click", () => {
+    c5.forEach(item => {
+        item.style.display =
+            item.style.display === "none" || item.style.display === ""
+            ? "flex"
+            : "none";
+    });
+});
+
+function enviarAtalho(texto) {
+
+    const body = document.getElementById("body");
+
+    const msgUser = criarMensagem(texto, "#ececec", "left");
+    body.appendChild(msgUser);
+
+    const carregando = criarMensagem("⌛ Aguardando resposta...", "#e2e2fcff", "right");
+    body.appendChild(carregando);
+
+    fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pergunta: texto })
+    })
+    .then(res => res.json())
+    .then(json => {
+        carregando.textContent = json.resposta;
+    });
+}
+
+document.querySelectorAll(".c1, .c2, .c3, .c4, .c5").forEach(item => {
+    item.addEventListener("click", () => {
+        enviarAtalho(item.textContent);
+    });
+});
