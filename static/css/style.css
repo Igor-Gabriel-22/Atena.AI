@@ -155,8 +155,14 @@ body{
     padding-top: 50px;
     padding-bottom: 10px;
     width: 100%;
-    height: 90%;
+    height: 85%;
     overflow-y: auto;
+    transition: all 1s ease;
+}
+
+.body.active{
+    width: 85%;
+    margin-left: 15%;
 }
 
 .mensagem{
@@ -400,4 +406,48 @@ body{
 
 .c5:hover{
     background-color: rgb(182, 182, 182);
+}
+
+
+@media (max-width: 768px) {
+    .apresentacao{
+        width: 90%;
+        height: 60%;
+    }
+    .icone{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+    .icone6{
+        top: 28%;
+    }
+    .icone7{
+        top: 30%;
+    }
+    .btn-apresentacao{
+        margin: 45px auto 0 auto;
+    }
+    .mensagem{
+        width: 70%;
+        padding-left: 2%;
+    }
+    .enviar{
+        width: 5.5%;
+        left: 86.5%;
+    }
+    .btn-aside.active{
+        left: 35%;
+    }
+    .historico{
+        width: 35%;
+        left: -35%;
+    }
+    .historico.active{
+        left: 0%;
+    }
+    .body.active{
+        width: 65%;
+        margin-left: 35%;
+    }
 }

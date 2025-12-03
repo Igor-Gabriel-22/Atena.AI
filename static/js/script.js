@@ -1,8 +1,11 @@
 const btn_aside = document.getElementById("btn-aside");
- const aside = document.getElementById("aside");
-  btn_aside.addEventListener("click", () => {
+const aside = document.getElementById("aside");
+const body = document.getElementById("body");
+
+btn_aside.addEventListener("click", () => {
     btn_aside.classList.toggle("active");
     aside.classList.toggle("active"); 
+    body.classList.toggle("active"); 
 });
 
 
