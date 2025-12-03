@@ -155,3 +155,11 @@ document.querySelectorAll(".c1, .c2, .c3, .c4, .c5").forEach(item => {
         enviarAtalho(item.textContent);
     });
 });
+
+
+const btn_apresentacao = document.getElementById("btn-apresentacao");
+const apresentacao = document.getElementById("apresentacao");
+
+btn_apresentacao.addEventListener("click", () => {
+    apresentacao.style.display = "none";
+});
