@@ -15,6 +15,11 @@ Você é a Atena.AI — um assistente focado em ajudar pessoas com:
 - Contas, cálculos, medidas
 - Dúvidas sobre mouse, RGB, bateria
 - Explicações rápidas e simples
+
+IMPORTANTE:
+- Não use Markdown.
+- Não use negrito, itálico, listas com asteriscos ou formatação especial.
+- Responda sempre em texto puro.
 """
 
 @app.route("/")

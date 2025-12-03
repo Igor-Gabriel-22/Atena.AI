@@ -408,6 +408,34 @@ body{
     background-color: rgb(182, 182, 182);
 }
 
+@media (max-width: 1000px) {
+    .apresentacao{
+        width: 70%;
+        height: 65%;
+    }
+    .icone{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+    .icone6{
+        top: 30%;
+    }
+    .enviar{
+        width: 4%;
+    }
+    .historico{
+        width: 28%;
+        left: -28%;
+    }
+    .btn-aside.active{
+        left: 28%;
+    }
+    .body.active{
+        width: 72%;
+        margin-left: 28%;
+    }
+}
 
 @media (max-width: 768px) {
     .apresentacao{
@@ -449,5 +477,49 @@ body{
     .body.active{
         width: 65%;
         margin-left: 35%;
+    }
+}
+@media (max-width: 480px) {
+    .apresentacao{
+        height: 70%;
+    }
+    .icone{
+        width: 75px;
+        height: 75px;
+    }
+    .titulo{
+        font-size: 38px;
+        margin-top: 75px;
+    }
+    .icone4{
+        left: 20%;
+        top: 90%;
+    }
+    .icone3{
+        left: 85%;
+        top: 85%;
+        width: 40px;
+        height: 40px;
+    }
+    .icone6{
+        width: 40px;
+        height: 40px;
+    }
+    .mensagem-apresentacao{
+        font-size: 28px;
+    }
+    .enviar{
+        width: 9%;
+    }
+    .historico{
+        width: 55%;
+        left: -55%;
+    }
+    .btn-aside.active{
+        left: 55%;
+    }
+    .body.active{
+        width: 45%;
+        margin-left: 55%;
     }
 }
