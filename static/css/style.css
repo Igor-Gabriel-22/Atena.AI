@@ -134,6 +134,7 @@ body{
     font-size: 22px;
     text-align: center;
     line-height: 45px;
+    cursor: pointer;
     margin: 70px auto 0 auto;
     color: #fff;
     text-decoration: none;
