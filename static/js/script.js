@@ -156,6 +156,9 @@ function enviarAtalho(texto) {
 document.querySelectorAll(".c1, .c2, .c3, .c4, .c5").forEach(item => {
     item.addEventListener("click", () => {
         enviarAtalho(item.textContent);
+        btn_aside.classList.toggle("active");
+        aside.classList.toggle("active"); 
+        body.classList.toggle("active"); 
     });
 });
 
